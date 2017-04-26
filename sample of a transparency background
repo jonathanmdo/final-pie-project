@@ -1,0 +1,14 @@
+import Tkinter
+import Image, ImageTk
+
+# open an image
+head = Image.open('background2.png')
+hand = Image.open('foreground2.png')
+root = Tkinter.Tk()  # A root window for displaying objects
+
+head.paste(hand,(20,20))
+
+# Convert the Image object into a TkPhoto object
+tkimage = ImageTk.PhotoImage(head)
+
+root.mainloop() # Start the GUI
